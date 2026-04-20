@@ -12,10 +12,9 @@ int main()
     // c记录折叠次数
     int c = 0;
 
-    while (a < b)
+    for (a < ; c++)
     {
-        a *= 2;
-        c++;
+        a = a * 2;
     }
 
     printf("折叠次数：%d 次\n", c);
