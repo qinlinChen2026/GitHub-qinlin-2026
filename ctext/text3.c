@@ -3,17 +3,44 @@
 // 必须 ≥ 2
 // 只能被 1 和 自己 整除
 // 中间没有任何数能把它整除
+// 特殊数字0(不是质数），1（是质数）
 // 比如：
 // 2 → 只能被 1、2 整除 → 质数
 // 3 → 只能被 1、3 整除 → 质数
 // 4 → 能被 2 整除 → 不是质数
 // 5 → 只能被 1、5 整除 → 质数
 // 9 → 能被 3 整除 → 不是质数
-#include<stdio.h>
-int main ()
+#include <stdio.h>
+int main()
 {
-    int a,b;
-    
+    int num, i;
+    int isPrime = 1;
+    // 特殊数字0(不是质数），1（是质数）
+    printf("请输入一个大于等于2的整数");
+    scanf("%d", &num);
+    if (num < 2)
+    {
+        printf("输入错误,必须输入数字>=2\n");
+    }
 
-        return 0;
+    for (i = 2; i <= num / 2; i++)
+    {
+        if (num % i == 0)
+        {
+            isPrime = 0;
+            break;
+        }
+    }
+
+    // 输出结果
+    if (isPrime == 1)
+    {
+        printf("%d 是质数\n", num);
+    }
+    else
+    {
+        printf("%d 不是质数\n", num);
+    }
+
+    return 0;
 }
