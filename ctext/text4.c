@@ -13,7 +13,7 @@
 #include <stdlib.h> // abs() 绝对值函数需要这个头文件
 int main()
 {
-    int n, sum = 0;
+    int n, sum = 0;å
     printf("随机输入一个整数");
     scanf("%d", &n);
     n = abs(n);
