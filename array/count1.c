@@ -5,7 +5,10 @@ int main()
 {
     int a[10];
     int i;
+
     int count[10] = {0};
+    int maxNum = 0;
+    int maxCnt = 0;
     printf("输入10个整数\n");
     for (i = 0; i < 10; i++)
     {
@@ -14,19 +17,15 @@ int main()
     for (i = 0; i < 10; i++)
     {
         count[a[i]]++;
-    }
-    int MaxNum = 0;
-    int MaxCnt = 0;
+        printf("%d",count[i]);
 
-    for (i = 0; i < 10; i++)
-    {
-        if (count[i] > MaxCnt)
+        if (count[a[i]] > maxCnt)
         {
-            MaxCnt=count[i] ;
-            MaxNum = i;
+            maxCnt = count[ a[i]];
+            maxNum = a[i];
         }
     }
-    printf("出现次数最多的数 %d 出现%d次 ", MaxNum, MaxCnt);
+    printf("出现次数最多的数 %d 出现%d次 ", maxNum, maxCnt);
 
     return 0;
 }
