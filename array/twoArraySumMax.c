@@ -21,6 +21,7 @@ int main()
         {
             scanf("%d", &numArr[i][j]);
         }
+    }
         maxNum = numArr[0][0];
         printf("\n二维数组内容：\n");
         for (i = 0; i < 3; i++)
@@ -41,6 +42,6 @@ int main()
         // 输出结果
         printf("\n所有元素总和：%d\n", sum);
         printf("数组最大值：%d\n", maxNum);
-    }
+    
     return 0;
 }
